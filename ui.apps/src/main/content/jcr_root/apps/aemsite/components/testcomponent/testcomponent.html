@@ -1,9 +1,13 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='task1lib'}" />
+</sly>
+
 <h1>AEM Lab Test Component</h1>
-<h3>${properties.title}</h3>
+<h3 id="title" class="${properties.titleStyle}">${properties.title}</h3>
 
 <div data-sly-test="${properties.title && properties.fileReferenceLogo && properties.link}">
     <a href="${properties.link}" target="${properties.openInNewTab ? '_blank' : '_self'}">
-        <img src="${properties.fileReferenceLogo}" alt="Logo" />
+        <img id="logo" src="${properties.fileReferenceLogo}" alt="Logo" />
     </a>
 </div>
 
@@ -11,3 +15,6 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png" alt=""/>
 </div>
 
+<script data-sly-test="${properties.enableJs}">
+    checkImageSize();
+</script>
