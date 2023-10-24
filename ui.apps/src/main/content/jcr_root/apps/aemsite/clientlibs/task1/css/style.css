@@ -1,0 +1,9 @@
+.red-underline {
+    color: red;
+    text-decoration: underline;
+}
+
+.blue-bold {
+    color: blue;
+    font-weight: bold;
+}
