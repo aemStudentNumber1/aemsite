@@ -26,6 +26,11 @@
     <artifactId>aemsite.core</artifactId>
     <name>AEM site - Core</name>
     <description>Core bundle for AEM site</description>
+
+    <properties>
+        <lombok.version>1.18.30</lombok.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -208,6 +213,13 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>org.apache.sling.models.impl</artifactId>
             <version>1.4.4</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

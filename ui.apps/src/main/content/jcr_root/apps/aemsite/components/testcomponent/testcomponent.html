@@ -1,8 +1,12 @@
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
     <sly data-sly-call="${clientlib.all @ categories='task1lib'}" />
 </sly>
+<sly data-sly-use.model ="com.aemsite.core.models.DemoResourceModel" />
 
 <h1>AEM Lab Test Component</h1>
+
+<h2>${model.message}</h2>
+
 <h3 id="title" class="${properties.titleStyle}">${properties.title}</h3>
 
 <div data-sly-test="${properties.title && properties.fileReferenceLogo && properties.link}">
